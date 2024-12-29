@@ -1,12 +1,16 @@
 'use client';
 
 // components/MDXComponents.tsx
-import { MDXImage } from './MDXImage';
+import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react';
+import MDXImage from './MDXImage';
+
+// Create a wrapper component for img that handles HTML img props
+const ImgComponent = (props: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>) => {
+  return <MDXImage src={props.src || ''} alt={props.alt || ''} />;
+};
 
 export const MDXComponents = {
-  MDXImage,
-  img: MDXImage,
-  // Add other custom components here
+  img: ImgComponent,
   h1: (props: any) => (
     <h1 
       className="text-5xl font-voyager-thin text-[var(--foreground)] mt-16 mb-8 leading-tight tracking-tight" 

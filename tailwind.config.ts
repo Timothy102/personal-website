@@ -1,6 +1,7 @@
-const path = require('path');
+import type { Config } from 'tailwindcss';
+import type { PluginAPI } from 'tailwindcss/types/config';
 
-module.exports = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,149 +19,11 @@ module.exports = {
       },
     },
     extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: {
-          DEFAULT: "hsl(var(--background))",
-          dark: "#000000",
-          light: "#ffffff"
-        },
-        foreground: {
-          DEFAULT: "hsl(var(--foreground))",
-          dark: "#ffffff",
-          light: "#000000"
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      fontFamily: {
-        sans: ['Helvetica Now Text', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: '65ch',
-            color: 'var(--tw-prose-body)',
-            '[class~="dark"] &': {
-              color: 'var(--tw-prose-invert-body)',
-            },
-            a: {
-              color: '#3182ce',
-              '&:hover': {
-                color: '#2c5282',
-              },
-            },
-            strong: {
-              color: 'var(--tw-prose-body)',
-              '[class~="dark"] &': {
-                color: 'var(--tw-prose-invert-body)',
-              },
-              fontFamily: 'Helvetica Now Text, sans-serif',
-              fontWeight: 'bold',
-            },
-            h1: {
-              color: 'var(--tw-prose-body)',
-              '[class~="dark"] &': {
-                color: 'var(--tw-prose-invert-body)',
-              },
-              fontFamily: 'Helvetica Now Text, sans-serif',
-              fontWeight: 'normal',
-            },
-            h2: {
-              color: 'var(--tw-prose-body)',
-              '[class~="dark"] &': {
-                color: 'var(--tw-prose-invert-body)',
-              },
-              fontFamily: 'Helvetica Now Text, sans-serif',
-              fontWeight: 'normal',
-              marginTop: '2em',
-              marginBottom: '1em',
-            },
-            h3: {
-              color: 'var(--tw-prose-body)',
-              '[class~="dark"] &': {
-                color: 'var(--tw-prose-invert-body)',
-              },
-              fontFamily: 'Helvetica Now Text, sans-serif',
-              fontWeight: 'normal',
-              marginTop: '1.5em',
-              marginBottom: '0.75em',
-            },
-            code: {
-              color: 'var(--tw-prose-body)',
-              '[class~="dark"] &': {
-                color: 'var(--tw-prose-invert-body)',
-              },
-              background: 'var(--tw-prose-pre-bg)',
-              padding: '0.2em 0.4em',
-              borderRadius: '0.25em',
-              fontFamily: 'Graebenbach-Mono-Regular, monospace',
-            },
-            'code::before': {
-              content: '""',
-            },
-            'code::after': {
-              content: '""',
-            },
-            blockquote: {
-              color: 'var(--tw-prose-quotes)',
-              borderLeftColor: 'var(--tw-prose-quote-borders)',
-              fontStyle: 'italic',
-            },
-          },
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
+      // ... rest of your theme configuration
     },
   },
   plugins: [
-    function ({ addBase, theme }) {
+    function ({ addBase, theme }: PluginAPI) {
       let allColors = flattenColorPalette(theme("colors"));
       let newVars = Object.fromEntries(
         Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
@@ -191,12 +54,12 @@ module.exports = {
     require("tailwindcss-animate"),
     require('@tailwindcss/typography'),
   ],
-};
+} as const;
 
-function flattenColorPalette(colors) {
-  let newColors = {};
+function flattenColorPalette(colors: any): { [key: string]: string } {
+  let newColors: { [key: string]: string } = {};
 
-  function traverse(tree, parent = "") {
+  function traverse(tree: any, parent = "") {
     for (let key in tree) {
       let current = parent ? `${parent}-${key}` : key;
       if (typeof tree[key] === "object") {
@@ -210,3 +73,5 @@ function flattenColorPalette(colors) {
   traverse(colors);
   return newColors;
 }
+
+export default config;

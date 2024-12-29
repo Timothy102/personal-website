@@ -2,26 +2,30 @@
 
 // components/MDXImage.tsx
 import Image from 'next/image';
-import type { FC } from 'react';
+import { FC } from 'react';
 
 interface MDXImageProps {
   src: string;
   alt: string;
   width?: number;
   height?: number;
+  className?: string;
 }
 
-export const MDXImage: FC<MDXImageProps> = ({ 
-  src, 
-  alt,
+const MDXImage: FC<MDXImageProps> = ({ 
+  src = '', 
+  alt = '',
   width = 800,
-  height = 400 
+  height = 400,
+  className = ''
 }) => {
+  if (!src) return null;
+
   // Clean up the path
   const imagePath = src.startsWith('/') ? src.slice(1) : src;
   
   return (
-    <div className="my-8">
+    <div className={`my-8 ${className}`}>
       <Image
         src={`/${imagePath}`}
         alt={alt}
@@ -34,5 +38,4 @@ export const MDXImage: FC<MDXImageProps> = ({
   );
 };
 
-// Also add a default export
 export default MDXImage;
