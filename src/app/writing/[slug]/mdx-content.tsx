@@ -1,32 +1,45 @@
-'use client';
-
 // app/writing/[slug]/mdx-content.tsx
-import { MDXRemote } from 'next-mdx-remote';
-import { serialize } from 'next-mdx-remote/serialize';
-import { useEffect, useState } from 'react';
-import { MDXComponents } from '../../../components/MDXComponents';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import type { MDXComponents } from 'mdx/types';
+import type { ImgHTMLAttributes, DetailedHTMLProps } from 'react';
+import MDXImage from '../../../components/MDXImage';
 
 interface MDXContentProps {
   source: string;
 }
 
-export function MDXContent({ source }: MDXContentProps) {
-  const [mdxSource, setMdxSource] = useState<any>(null);
+// Create proper type for img component props
+type ImgProps = DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>;
 
-  useEffect(() => {
-    const renderMDX = async () => {
-      const mdx = await serialize(source, {
-        parseFrontmatter: true,
-      });
-      setMdxSource(mdx);
-    };
+const components: MDXComponents = {
+  MDXImage: MDXImage,
+  img: ({ src, alt, width, height, className, ...props }: ImgProps) => {
+    if (!src) return null;
     
-    renderMDX();
-  }, [source]);
-
-  if (!mdxSource) {
-    return <div>Loading...</div>;
+    return (
+      <MDXImage
+        src={src}
+        alt={alt || ''}
+        width={typeof width === 'number' ? width : 800}
+        height={typeof height === 'number' ? height : 400}
+        className={className}
+        {...props}
+      />
+    );
   }
+};
 
-  return <MDXRemote {...mdxSource} components={MDXComponents} />;
+export function MDXContent({ source }: MDXContentProps) {
+  return (
+    <MDXRemote 
+      source={source} 
+      components={components}
+      options={{
+        parseFrontmatter: true,
+        mdxOptions: {
+          development: process.env.NODE_ENV === 'development'
+        }
+      }}
+    />
+  );
 }

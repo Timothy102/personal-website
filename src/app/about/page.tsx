@@ -87,10 +87,10 @@ const About = () => {
                 </Link>
                 <div className="flex flex-col w-full align-center justify-center space-y-4 items-center">
                   <p className="w-full font-aeonik-regular tracking-tight text-center leading-[100%] text-[21px] mb-3">ABOUT </p>
-                  <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">Hey, I'm Tim.</h1>
+                  <h1 className="font-voyager-thin text-[44px] md:text-[54px] leading-[125%] text-center tracking-tight mb-3">Hey, I'm Tim</h1>
                   <div className="w-full md:w-2/3 font-aeonik-regular tracking-[0.015em] space-y-10 items-center align-center justify-center text-[21px] md:text-[21px]">
                     {/* Main content paragraphs */}
-                    <p className="leading-[150%]">Glad to meet you.</p>
+                    <p className="leading-[150%] mt-10">Glad to meet you.</p>
                     
                     <p className="leading-[150%]">For as long as I can remember, I've been relentlessly driven. First it was football, then coding. Now, I focus on building early-stage AI-1st businesses.</p>
                     
