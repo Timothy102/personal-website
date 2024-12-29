@@ -1,0 +1,119 @@
+---
+title: "Build Your Own Liquid Neural Network with PyTorch"
+date: "2024-09-04"
+---
+
+# Build Your Own Liquid Neural Network with PyTorch
+
+For the past 35 years, we have built these probabilistic models that output predictions based on data and learned parameters(θ). Each neuron is a logistic regression gate ...
+
+Tie that to backpropagation — a model’s ability to retrain parameter weights based on model loss and you get neural networks.
+
+![Neural Network Architecture](/writings/neural_network_architecture.png)
+
+Neural networks, however, have some limitations in the modern world:
+
+- They perform well on unified tasks, but cannot generalize knowledge across tasks, i.e have solid states.
+- They process data non-sequentially, making them inefficient at handling real-time data.
+
+Solution: “a type of neural network that learns on the job, not only during the training phase.”  
+That’s what we refer to as LNNs — Liquid Neural Networks.
+
+Liquid Neural Networks (LNNs) are a type of neural network that processes data sequentially and adapts to changing data in real-time, much like the human brain.
+
+![LNN Architecture](/assets/lnn_architecture.png)
+
+A Liquid Neural Network is a time-continuous Recurrent Neural Network (RNN) that processes data sequentially, keeps the memory of past inputs, adjusts its behaviors based on new inputs, and can handle variable-length inputs to enhance the task-understanding capabilities of NNs.
+
+Their adaptable nature gives them the ability to continually learn and adapt and, ultimately, process time-series data more effectively than traditional neural networks.
+
+A continuous time neural network is a neural network ƒ with:
+
+![Image by: LNN Authors](/assets/lnn_authors.png)
+
+If ƒ parameterizes the derivatives of the hidden state, we can go from a discrete computational graph to a continuous time graph. This allows us the following 2 properties of LNNs:
+
+- The space of possible functions is much larger due to liquid states.
+- Arbitrary time step computation making LNNs ideal for sequential data.
+
+## Benefits of LNNs
+
+Liquid neural networks offer a number of core benefits. Some of these are:
+
+- Real-time decision-making capabilities;
+- Respond quickly to a wide range of data distributions;
+- Resilient and able to filter out anomalous or noisy data;
+- Increased interpretability than a black-box machine learning algorithm;
+- Reduced computational costs.
+
+## Challenges of LNNs
+
+While liquid neural networks are very useful, they aren’t without their own set of unique challenges. These include:
+
+- Struggle with processing static or fixed data
+- Training difficulties due to elevated or vanishing gradients;
+- Limitations in learning long-term dependencies due to gradient problems;
+- Lack of extensive research into the functioning of liquid neural networks;
+- The time-consuming parameter-tuning process;
+- Challenges in processing static or fixed data.
+
+## How are LNNs Different than RNNs?
+
+### Neuron State Architecture:
+In an LSM, the recurrent connections are randomly generated and fixed. The input signals are fed into this randomly connected network, and the network’s response to these inputs is processed further for tasks such as classification or prediction.
+
+### Training:
+RNNs are trained with Backpropagation Through-Time (BPTT) while LNNs typically rely on a form of unsupervised learning known as “reservoir computing.” In this approach, the recurrent connections (the reservoir) are randomly generated and kept fixed. Only the readout layer, which maps the reservoir’s dynamics to the desired output, is trained using supervised learning techniques. This makes LSM training simpler compared to RNNs.
+
+### Vanishing Gradient Problem:
+LNNs are often considered more robust to parameter changes due to their fixed recurrent connections.
+
+### Applications:
+RNNs are well-suited for sequential modelling, but LNNs have been known to solve various tasks, including speech recognition, robot control, and temporal pattern recognition.
+
+![Image by: LNN Authors](/assets/lnn_authors_applications.png)
+
+## Intuition
+
+Liquid neural networks are inspired by the nervous system of a microscopic worm called C. elegans, which has only 302 neurons but can generate complex behaviors.
+
+Liquid neural networks are composed of linear first-order dynamical systems modulated via nonlinear interlinked gates.  
+They can handle variable-length inputs and enhance the task-understanding capabilities of neural networks. Unlike conventional neural networks, which have fixed weights and activation functions, liquid neural networks have adaptive weights and activation functions that change according to the input data. This allows them to learn from sequential data without forgetting previous information or overfitting to specific patterns.
+
+![Image by LNN Authors](/assets/lnn_authors_intuition.png)
+
+## Implementation of Liquid Neural Network in Pytorch
+
+Training a Liquid Neural Network (LNN) in PyTorch involves several steps, including defining the network architecture, implementing the ODE solver, and optimizing the network parameters. Here’s a step-by-step guide to training an LNN in PyTorch:
+
+### Step I: Import Necessary Libraries
+
+![Step I: Install Requirements](/assets/install_requirements.png)
+
+### Step II: Define the Network Architecture:
+
+LNNs consist of a series of layers, each of which applies a nonlinear transformation to the input. The output of each layer is passed through a leaky ReLU activation function, which helps to introduce nonlinearity in the network.
+
+![Step II: Define the LLN Architecture](/assets/define_lnn_architecture.png)
+
+### Step III: Implement the ODE Solver:
+
+The ODE solver is responsible for updating the weights of the network based on the input data. You can use PyTorch’s autograd system to implement the ODE solver.
+
+![Step III: Loss Calculation](/assets/loss_calculation.png)
+
+### Step IV: Define the Training Loop:
+
+The training loop updates the weights of the network based on the input data and the ODE solver.
+
+![Step IV: Defining The Training Loop](/assets/training_loop.png)
+
+## Conclusion
+
+In the AI landscape, liquid neural networks are among the most critical emerging models.
+
+It coexists with the classic deep-learning neural network but appears a better fit for extremely complex tasks such as autonomous vehicles, temperature or climate reading, or stock market assessments, whereas the classic deep-learning neural network does a better job with static or one-time data.
+
+The researchers at the Computer Science and Artificial Intelligence Laboratory at MIT (CSAIL) have been trying to extend the capabilities of liquid neural networks to more use cases, but it will take time.
+
+Both liquid neural networks and classic deep-learning neural networks have their defined roles in the broader AI picture, and it’s definitely a case where two models are better than one.

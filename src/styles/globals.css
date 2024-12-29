@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+
+  .dark {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] font-aeonik-regular;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  html {
+    @apply antialiased;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+}
+
+/* Add your font classes back */
+.font-voyager-thin {
+  font-family: 'Voyager-Light', sans-serif;
+}
+
+.font-aeonik-thin {
+  font-family: 'Aeonik-Light', sans-serif;
+}
+
+.font-aeonik-regular {
+  font-family: 'Aeonik-Regular', sans-serif;
+}
+
+.font-aeonik-medium {
+  font-family: 'Aeonik-Medium', sans-serif;
+}
+
+.font-aeonik-bold {
+  font-family: 'Aeonik-Bold', sans-serif;
+}

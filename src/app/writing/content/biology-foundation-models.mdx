@@ -1,0 +1,84 @@
+---
+title: "Biology Foundation Models, Explained Intuitively"
+date: "2024-03-30"
+---
+
+# Biology Foundation Models, Explained Intuitively
+
+2020s are the breakthrough years for foundational biology models
+
+While most of the LLM world has been busy:
+
+- Building better retrieval schemes for RAG Applications
+- Open-sourcing ever lighter general-purpose LLMs
+- Enabling faster online inference
+- Building LPUs?
+
+… I believe the most compelling breakthrough in the next years (2024 -> 2030) will come in the form of Foundation Models.
+
+### Here’s Why:
+Increasing entropy/noise in the life-science academia makes it hard to understand novel developments. Foundation models trained on a large corpus of such scientific data will be able to reason better.  
+Researchers will be able to use these large foundation models to guide their research, extract information from research papers, and write abstracts.  
+General-purpose LLMs, like GPT-4 and Claude-3, are insufficient in providing useful information in domains like nutrition, finance, and biology.  
+RLHF will expand to support science-backed notations, not merely human-reinforced sentiments, like anger and toxicity.
+
+Anyhow, this article was written out of personal curiosity to understand the state-of-the-art developments in foundation models, especially pertaining to biology. Here’s What You’ll Learn:
+
+- What are Foundation Models
+- Why I’m SO Excited About Them
+- What Foundation Models Allow Us To Do (Examples) & Full List of Bio-Foundational Models
+
+## Who Should Read This?
+
+Who is this blog post useful for? This post is largely useful for applied researchers in their fields looking to understand how they can use AI to advance their work.  
+How advanced is this post? It’s not. Tech folks will find it easier to grasp with these concepts, but its content should be understood by anyone.  
+Read more: [timc102.medium.com](https://timc102.medium.com)
+
+## What are Foundation Models?
+
+Here’s my definition of a foundation model:
+
+A foundation model is a distilled learned representation of applied scientific knowledge which allows it to extract & reason upon that knowledge.  
+The “foundation” aspect comes from their generalizability: once pre-trained, they can be fine-tuned with smaller, domain-specific datasets to excel in specific tasks, reducing the need for training new models from scratch. This approach enables them to serve as a versatile base for a multitude of applications, from natural language processing to bioinformatics, by adapting to the nuances of particular challenges through additional training.
+
+![Cross-Foundation Model Landscape](/writings/cross_foundation_model_landscape.png)
+
+As Chris Gibson, co-founder and CEO at Recursion Pharmaceuticals, writes in his LinkedIn post:
+
+> ‘To build broad foundation models in biology, you are going to need a lot of high-quality data. Aside from a few problems (e.g., protein folding), that data doesn’t currently exist in the public domain. The winners of TechBio will have access to high-quality talent, deep compute resources, AND the ability to iteratively generate rich biological data at scale…  
+> One day we will move wet-lab biology to confirmation and validation of in silico hypotheses only, but only those who can generate data at scale and quality today will get to that point for most drug discovery and development problems…’
+
+## Why I’m SO Excited About Them
+
+- Decreased entry-to-barrier for R&D startups  
+- Increasing entropy/noise in life-science academia makes it hard to understand novel developments. Foundation models trained on a large corpus of such scientific data will be able to reason better.  
+- Researchers will be able to use these large foundation models to guide their research, extract information from research papers, and write abstracts.  
+- General-purpose LLMs, like GPT-4 and Claude-3, are insufficient in providing useful information in domains like nutrition, finance, and biology.  
+- RLHF will expand to support science-backed notations, not merely human-reinforced sentiments, like anger and toxicity.  
+- Education: Foundation models will enhance science communication efforts by generating accessible summaries, explanations, and educational materials.  
+- It’s getting cheaper!
+
+![Decreased R&D/Success Over Time](/writings/decreased_rd_success_over_time.png)
+
+## What Foundation Models Allow Us To Do (Examples) & Final Thoughts
+
+There have been several ‘foundation’ models in bio and healthcare including AlphaFold (protein structure prediction), RoboRx (predicts drug prescription interactions), DeepNovo (peptide sequencing from mass spectrometry), EcoRNN (ecosystem population dynamics), amongst others.
+
+### a. BioOptimus — Raised $35M
+
+A team of scientists formerly working at Google DeepMind and Owkin have joined forces to create Bioptimus, a start-up that will apply generative artificial intelligence (GenAI) to “capture the laws of biology that hitherto remained too complex to be properly understood,” according to chief executive and co-founder, Professor Jean-Philippe Vert.
+
+### b. AlphaFold — Protein Folding
+
+OpenFold (a trainable open-source implementation of AlphaFold2) had essentially the same performance on a training set of 10,000 sequences as it did on a training set of 100,000 protein sequences (which was the entire protein databank).
+
+![AlphaFold Protein Folding](/writings/alphafold_protein_folding.png)
+
+Another current limitation of the field is the difficulty in directly comparing size and scale of biology foundation models since the parameters, layers, and attention heads aren’t always reported. However, in our initial compiling of the literature, there seems to be the 100M parameter size minimum for foundation models with 5M cells minimum training size for scRNA-seq data.
+
+Here’s a Full List of Bio-Foundation Models: [Bio foundation model database | Notion](https://compoundvc.notion.site)
+
+## Conclusion
+
+General-purpose LLMs are large reasoning machines trained across the internet. Foundation models are domain-specific reasoning machines that allow researchers to extract and reason information.  
+Decreased costs and increased availability to training data will foster development of both foundation biomodels, like AlphaFold as well as singlemodal vertical models, like OpenFold.

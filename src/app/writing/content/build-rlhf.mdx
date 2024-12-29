@@ -1,0 +1,78 @@
+---
+title: "Build Your Own RLHF LLM - Forget Human Labelers"
+date: "2024-18-02"
+---
+
+# Build Your Own RLHF LLM - Forget Human Labelers
+
+Self-play LLMs
+
+### What You’ll Learn
+
+1. How GPT-3.5 used RLHF to reinforce the LLM to become ChatGPT.  
+2. A complete code walkthrough to train your own RLHF model.  
+3. How to create a Self-Play LLM that reinforces itself without human labelers.
+
+## 1. How GPT-3 Used Human Feedback to Reinforce the LLM
+
+RLHF involves humans providing feedback (usually rankings) to evaluate the performance of an LLM. In the case of GPT-3.5, this human feedback was used to fine-tune the model, reinforcing desired behaviors.  
+
+Human Policy: When a post (e.g., "The cat is flying through the air") is given, two summaries are selected. A human ranks which one is better.  
+Result: With this feedback, GPT-3.5 underwent fine-tuning to improve its conversational ability, transforming it into ChatGPT.
+
+![Human Feedback Process](writings/human_feedback.png)
+
+## 2. Train Your Own RLHF Model
+
+This section demonstrates how to create an RLHF model using custom datasets. The process involves three main steps:
+
+### 2.1 Dataset Creation
+
+Custom Dataset: Collect feedback by asking humans to rank language model responses to given prompts. This ranking helps to create a dataset of preferences.  
+Label Studio: Use Label Studio to organize this data and label it according to human feedback.
+
+![Label Studio Setup](writings/label_studio_setup.png)
+
+### 2.2 Training a Preference Model
+
+Preference Model: This model is trained on the labeled dataset to understand which response is preferred.  
+Fine-tuning with PPO: The model is fine-tuned using PPO (Proximal Policy Optimization), connecting the feedback to improve the LLM's performance.
+
+## 3. Self-Play Language Models (No Human Labelers Required)
+
+The bottleneck of RLHF is the reliance on human labelers. However, a new approach called Self-Play Language Models can eliminate this need. Here’s how it works:
+
+### 3.1 Self-Play with LLMs
+
+Self-Play Process: The model generates responses to prompts, then uses its own judgment (based on internal evaluation) to determine the quality of these responses.  
+Training Loop:
+1. Generate Text: Model generates responses to prompts.  
+2. Evaluate Text: Model uses a scoring function to evaluate its own responses.  
+3. Update Model: The model updates itself based on the evaluation.  
+4. Repeat: This process continues iteratively, allowing the model to self-improve.
+
+![Self-Play Process](writings/self_play_process.png)
+
+### 3.2 Model as Judge
+
+LLM-as-a-Judge: The self-play LLM acts as its own judge, making it capable of evaluating and improving itself without human feedback.
+
+## 4. Train Your Own RLHF Model Without Human Labelers
+
+With Self-Play LLMs, you can bypass human labelers entirely. Here’s how to proceed:
+
+1. Use Pretrained Models: Start with a pretrained self-play model, such as one available in the HuggingFace library.  
+2. Train the Self-Play LLM: Implement a training loop where the model generates, evaluates, and refines its responses.
+
+By following these steps, you can build your own self-play LLM and eliminate the need for human labelers in the RLHF process.
+
+![Training Loop](writings/training_loop.png)
+
+### Summary
+
+- Self-Play LLM Training: This method allows LLMs to train themselves autonomously, drastically reducing the need for human intervention.  
+- No Need for Human Feedback: By utilizing self-play, you can achieve RLHF-like outcomes while leveraging pretrained models and fine-tuning them without human feedback.  
+- Scalable RLHF Approach: Self-play LLMs offer a more scalable solution to RLHF, allowing the model to continuously improve through its own evaluation.
+
+
+This article provides a streamlined path to creating RLHF models without the need for human labelers by utilizing self-play LLMs. 
