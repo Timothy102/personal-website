@@ -77,7 +77,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           </time>
         </header>
 
-        <article className="prose prose-lg max-w-none">
+        <article className="prose prose-lg max-w-none dark:prose-invert prose-p:text-[var(--foreground)] dark:prose-p:text-[var(--foreground)] prose-headings:text-[var(--foreground)] dark:prose-headings:text-[var(--foreground)]">
           <MDXContent source={post.content} />
         </article>
       </main>
