@@ -1,9 +1,11 @@
+// app/writing/[slug]/page.tsx
 import React from 'react';
 import Link from 'next/link';
 import Navbar from "../../../components/Navbar";
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { MDXContent } from './mdx-content';
 
 async function getPost(slug: string) {
   const postsDirectory = path.join(process.cwd(), 'src/app/writing/content');
@@ -12,13 +14,25 @@ async function getPost(slug: string) {
   try {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
+    
+    // Get the content after the frontmatter and first title
+    const processedContent = content
+      // Remove frontmatter if it somehow remains in content
+      .replace(/^---[\s\S]*?---/, '')
+      // Remove any title that starts with #
+      .replace(/^#\s+.*\n/, '')
+      // Remove empty lines at the start
+      .trimStart();
 
     return {
       slug,
-      content,
+      content: processedContent,
+      title: data.title,
+      date: data.date,
       ...data
     };
   } catch (e) {
+    console.error('Error reading MDX:', e);
     return null;
   }
 }
@@ -54,55 +68,17 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           ← Back to Writing
         </Link>
 
-        <header className="mb-12">
-          <time className="text-[#00000080] dark:text-[#ffffff80] text-sm italic block mb-2">
+        <header className="mb-16">
+          <h1 className="text-5xl font-voyager-thin text-[var(--foreground)] mb-4 leading-tight tracking-tight">
+            {post.title}
+          </h1>
+          <time className="text-[#00000080] dark:text-[#ffffff80] text-sm italic block">
             {post.date}
           </time>
         </header>
 
         <article className="prose prose-lg max-w-none">
-          {post.content.split('\n').map((paragraph, index) => {
-            if (paragraph.startsWith('#')) {
-              const level = paragraph.match(/^#+/)[0].length;
-              const text = paragraph.replace(/^#+\s/, '');
-              const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-              return (
-                <Tag 
-                  key={index} 
-                  className={`
-                    ${level === 1 ? 'text-5xl' : level === 2 ? 'text-4xl' : 'text-3xl'}
-                    font-voyager-thin 
-                    text-[var(--foreground)] 
-                    mt-16 
-                    mb-8 
-                    leading-tight
-                    tracking-tight
-                  `}
-                >
-                  {text}
-                </Tag>
-              );
-            } else if (paragraph.startsWith('-')) {
-              return (
-                <li 
-                  key={index} 
-                  className="text-[#00000099] dark:text-[#ffffff99] text-lg leading-relaxed mb-4"
-                >
-                  {paragraph.slice(2)}
-                </li>
-              );
-            } else if (paragraph.trim()) {
-              return (
-                <p 
-                  key={index} 
-                  className="text-[#000000cc] dark:text-[#ffffffcc] text-lg leading-relaxed mb-8 font-aeonik-regular"
-                >
-                  {paragraph}
-                </p>
-              );
-            }
-            return null;
-          })}
+          <MDXContent source={post.content} />
         </article>
       </main>
     </div>

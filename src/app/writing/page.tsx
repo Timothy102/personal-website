@@ -10,28 +10,24 @@ async function getAllPosts() {
   const fileNames = fs.readdirSync(postsDirectory);
   
   const posts = fileNames.map(fileName => {
-    // Remove ".mdx" from file name to get id
     const slug = fileName.replace(/\.mdx$/, '');
-
-    // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
+    
+    // Parse the frontmatter
+    const { data } = matter(fileContents);
 
-    // Use gray-matter to parse the post metadata section
-    const { data, content } = matter(fileContents);
-
-    // Get the first paragraph as excerpt
-    const excerpt = content.split('\n').find(line => line.trim() && !line.startsWith('#')) || '';
-
+    // Return only the necessary data
     return {
       slug,
-      excerpt,
-      ...data
+      title: data.title,
+      date: data.date,
+      description: data.description || '', // Use description from frontmatter if available
     };
   });
 
-  // Sort posts by date
-  return posts.sort((a: any, b: any) => {
+  // Sort posts by date in descending order
+  return posts.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
@@ -48,12 +44,13 @@ export default async function Writing() {
       <Navbar />
       
       <main className="max-w-2xl mx-auto px-6 pt-32 pb-16">
-      <Link 
+        <Link 
           href="/"
           className="text-[#00000080] dark:text-[#ffffff80] hover:text-[var(--foreground)] transition-colors mb-12 block"
         >
           ← Back to Home
         </Link>
+
         <div className="mb-16">
           <h1 className="text-4xl mb-4 font-voyager-thin">Writing</h1>
           <p className="text-[#00000080] dark:text-[#ffffff80] text-lg">
@@ -62,7 +59,7 @@ export default async function Writing() {
         </div>
 
         <div className="space-y-12">
-          {posts.map((post: any) => (
+          {posts.map((post) => (
             <Link 
               href={`/writing/${post.slug}`}
               key={post.slug}
@@ -77,9 +74,11 @@ export default async function Writing() {
                     {post.date}
                   </time>
                 </div>
-                <p className="text-[#00000080] dark:text-[#ffffff80] text-base">
-                  {post.excerpt}
-                </p>
+                {post.description && (
+                  <p className="text-[#00000080] dark:text-[#ffffff80] text-base">
+                    {post.description}
+                  </p>
+                )}
               </article>
             </Link>
           ))}

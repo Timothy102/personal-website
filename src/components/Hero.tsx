@@ -154,7 +154,7 @@ const Hero = () => {
                     />
                   </div>
                   <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
-                    host any ml model and get paid per inference call. 0 to 10,000 users in 6 months.
+                    host any ml model and get paid per inference call.
                     <br/><br/>
                   </p>
                 </CardSpotlight>

@@ -8,5 +8,4 @@
 * Posthog
 * Vercel
 
-Visit site here: +http://www.timcvetko.com
-# personal-website
+Visit site here: http://www.timcvetko.com

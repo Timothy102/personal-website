@@ -1,16 +1,14 @@
 ---
 title: "Build Your Own Liquid Neural Network with PyTorch"
 date: "2024-09-04"
+description: "Neural networks that learn and adapt in real-time."
 ---
-
-# Build Your Own Liquid Neural Network with PyTorch
 
 For the past 35 years, we have built these probabilistic models that output predictions based on data and learned parameters(θ). Each neuron is a logistic regression gate ...
 
 Tie that to backpropagation — a model’s ability to retrain parameter weights based on model loss and you get neural networks.
 
-![Neural Network Architecture](/writings/neural_network_architecture.png)
-
+<MDXImage src="/writings/neural_network_architecture.png" alt="Neural Network Architecture" />
 Neural networks, however, have some limitations in the modern world:
 
 - They perform well on unified tasks, but cannot generalize knowledge across tasks, i.e have solid states.
@@ -21,7 +19,7 @@ That’s what we refer to as LNNs — Liquid Neural Networks.
 
 Liquid Neural Networks (LNNs) are a type of neural network that processes data sequentially and adapts to changing data in real-time, much like the human brain.
 
-![LNN Architecture](/assets/lnn_architecture.png)
+<MDXImage src="/writings/lln_architecture.png" alt="LNN Architecture" />
 
 A Liquid Neural Network is a time-continuous Recurrent Neural Network (RNN) that processes data sequentially, keeps the memory of past inputs, adjusts its behaviors based on new inputs, and can handle variable-length inputs to enhance the task-understanding capabilities of NNs.
 
@@ -29,7 +27,7 @@ Their adaptable nature gives them the ability to continually learn and adapt and
 
 A continuous time neural network is a neural network ƒ with:
 
-![Image by: LNN Authors](/assets/lnn_authors.png)
+<MDXImage src="/writings/lln_authors.png" alt="Image by: LNN Authors" />
 
 If ƒ parameterizes the derivatives of the hidden state, we can go from a discrete computational graph to a continuous time graph. This allows us the following 2 properties of LNNs:
 
@@ -71,7 +69,7 @@ LNNs are often considered more robust to parameter changes due to their fixed re
 ### Applications:
 RNNs are well-suited for sequential modelling, but LNNs have been known to solve various tasks, including speech recognition, robot control, and temporal pattern recognition.
 
-![Image by: LNN Authors](/assets/lnn_authors_applications.png)
+<MDXImage src="/writings/lnn_authors_applications.png" alt="Image by: LNN Authors" />
 
 ## Intuition
 
@@ -80,7 +78,7 @@ Liquid neural networks are inspired by the nervous system of a microscopic worm 
 Liquid neural networks are composed of linear first-order dynamical systems modulated via nonlinear interlinked gates.  
 They can handle variable-length inputs and enhance the task-understanding capabilities of neural networks. Unlike conventional neural networks, which have fixed weights and activation functions, liquid neural networks have adaptive weights and activation functions that change according to the input data. This allows them to learn from sequential data without forgetting previous information or overfitting to specific patterns.
 
-![Image by LNN Authors](/assets/lnn_authors_intuition.png)
+<MDXImage src="/writings/lln_authors_intuition.png" alt="Image by LNN Authors" />
 
 ## Implementation of Liquid Neural Network in Pytorch
 
@@ -88,25 +86,25 @@ Training a Liquid Neural Network (LNN) in PyTorch involves several steps, includ
 
 ### Step I: Import Necessary Libraries
 
-![Step I: Install Requirements](/assets/install_requirements.png)
+<MDXImage src="/writings/install_requirements.png" alt="Step I: Install Requirements" />
 
 ### Step II: Define the Network Architecture:
 
 LNNs consist of a series of layers, each of which applies a nonlinear transformation to the input. The output of each layer is passed through a leaky ReLU activation function, which helps to introduce nonlinearity in the network.
 
-![Step II: Define the LLN Architecture](/assets/define_lnn_architecture.png)
+<MDXImage src="/writings/define_lnn_architecture.png" alt="Step II: Define the LLN Architecture" />
 
 ### Step III: Implement the ODE Solver:
 
 The ODE solver is responsible for updating the weights of the network based on the input data. You can use PyTorch’s autograd system to implement the ODE solver.
 
-![Step III: Loss Calculation](/assets/loss_calculation.png)
+<MDXImage src="/writings/loss_calculation.png" alt="Step III: Loss Calculation" />
 
 ### Step IV: Define the Training Loop:
 
 The training loop updates the weights of the network based on the input data and the ODE solver.
 
-![Step IV: Defining The Training Loop](/assets/training_loop.png)
+<MDXImage src="/writings/training_loop.png" alt="Step IV: Defining The Training Loop" />
 
 ## Conclusion
 
