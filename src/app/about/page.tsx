@@ -96,8 +96,7 @@ const About = () => {
                     
                     <p className="leading-[150%]">I currently work as mlops @ sync.labs (yc w24), a research company where we're building generative models to modify and synthesize humans in video.</p>
                     
-                    <p className="leading-[150%]">I like to work intensely on hard problems that improve the way we work, live, and create, preferably with people smarter than me. I tend to be direct, inquisitive and I read a lot. Find my favourite books here.</p>
-                    
+                    <p className="leading-[150%]">I like to work intensely on hard problems that improve the way we work, live, and create, preferably with people smarter than me. I tend to be direct, inquisitive and I read a lot. Find my favourite books <Link href="/reading" className="text-blue-500 underline">here</Link>.</p>                    
                     <p className="leading-[150%]">I genuinely enjoy sports(tennis recently), 60's jazz, and authentic people with fire in their eyes. Also a Gemini, ENFJ-a, 80% Dynamo(ideas), 20% Steel(systems).</p>
                     
                     <p className="leading-[150%]">Talk to me about:</p>
