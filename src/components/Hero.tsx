@@ -173,7 +173,7 @@ const Hero = () => {
                 • <Link href="https://movens.vc" className="underline">movens.vc</Link> - $100M AI VC fund in CEE [advisor]
               </p>
               <p className="text-[16px]">
-                • <Link href="https://e2.vc" className="underline">e2.vc</Link> - AI fund building tomorrow's emerging Europe [advisor]
+                • <Link href="https://e2.vc" className="underline">e2.vc</Link> - VC fund building tomorrow's emerging Europe [advisor]
               </p>
             </div>
           </div>
