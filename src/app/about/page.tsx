@@ -7,12 +7,12 @@ import InteractiveLink from './InteractiveLink';
 
 const awards = [
     {
-        name: "Silver Medal at RIS - Slovenian National Machine Learning Competition",
-        desc: "2nd place in predicting COVID extensiveness from 3D CT scans.",
-        year: "2021",
+      name: <Link href="https://www.dmfa.si/ODrustvu/NovicaPrikaz.aspx?itemid=479">Silver Medal at RIS - Slovenian National Machine Learning Competition</Link>,
+      desc: "2nd place in predicting COVID extensiveness from 3D CT scans.",
+      year: "2021",
     },
     {
-        name: "Science Jam Finalists: Medlink",
+        name: <Link href="https://sciencejam.rc-nm.si/en/science-jam/">Science Jam Finalists: Medlink</Link>,
         desc: "Accelerator for the brightest high-school innovators.",
         year: "2021",
     }
@@ -22,12 +22,12 @@ const education = [
   {
     name: "University of Amsterdam",
     desc: "Bachelor of Science - BS, Artificial Intelligence.",
-    year: "2022 - 2025",
+    year: "2023 - 2025",
   },
   {
     name: "Imperial College Business School",
     desc: "Executive Venture Capital Programme:  Master Startup Funding and Investment Strategies, VC.",
-    year: "2023",
+    year: "2022",
   },
 ];
 
@@ -36,7 +36,7 @@ const experiences = [
         number: "01",
         position: "MLOPS ENGINEER",
         year: "2024",
-        companyName: "sync.labs (YC W24)",
+        companyName: "sync.labs (yc w24)",
         link: "https://sync.labs",
         imageName: "/icons/sync.png",
         roleDescription: "Building generative models to modify + synthesize humans in video."
@@ -52,7 +52,7 @@ const experiences = [
     },
     {
         number: "03",
-        position: "ENGINEER",
+        position: "ML ENGINEER",
         year: "2022",
         companyName: "Inferex",
         link: "https://inferex.com",
@@ -66,7 +66,7 @@ const experiences = [
         companyName: "Rywave",
         link: "https://rywave.com",
         imageName: "/icons/rywave.png",
-        roleDescription: "At Rywave, our mission was to enable artists to create and sell their collectibles seamlessly to their truest fans in seconds."
+        roleDescription: "At Rywave, our mission was to enable artists to create and sell their collectibles seamlessly to their truest fans in seconds. Backed by Sony, Universal & TuneCore. No PMF."
     }
 ];
 
