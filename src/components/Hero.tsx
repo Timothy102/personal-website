@@ -35,11 +35,11 @@ const experiences = [
     icon: "inferex"
     },
     {
-    company: "Axiologo",
-    role: "Data Science Intern",
+    company: "Z-Score",
+    role: "ML Engineer",
     year: "2021",
     color: "gray",
-    icon: "axiologo"
+    icon: "z-score"
     }
   ];
 
