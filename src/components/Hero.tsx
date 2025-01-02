@@ -162,6 +162,26 @@ const Hero = () => {
                     <br/><br/>
                   </p>
                 </CardSpotlight>
+                <CardSpotlight 
+                  href="https://videochat.timcvetko.com"
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] p-4 space-y-2 bg-[var(--background)]"
+                >
+                  <div className="flex flex-row w-full justify-between items-center">
+                    <p className="font-aeonik-medium text-[18px]"><img src="/logos/voicechat.png" alt="Voice chat icon" className="inline w-4 h-4" /> videochat</p>
+                    <Image
+                      priority
+                      src="/home/iconArrowUprightWhite.png"
+                      height={100}
+                      width={100}
+                      alt="White arrow icon"
+                      className="w-3 h-3 transition-opacity duration-200 opacity-100"
+                    />
+                  </div>
+                  <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
+                    learn 10x by chatting with any yt video
+                    <br/><br/>
+                  </p>
+                </CardSpotlight>
               </div>
             </div>
           </div>
