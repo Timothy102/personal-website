@@ -167,7 +167,10 @@ const Hero = () => {
                   className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] p-4 space-y-2 bg-[var(--background)]"
                 >
                   <div className="flex flex-row w-full justify-between items-center">
-                    <p className="font-aeonik-medium text-[18px]"><img src="/logos/voicechat.png" alt="Voice chat icon" className="inline w-4 h-4" /> videochat</p>
+                    <p className="font-aeonik-medium text-[18px] flex items-center space-x-2">
+                      <img src="/logos/videochat.png" alt="Videochat icon" className="inline w-4 h-4 align-middle mb-50" /> 
+                      <span>videochat</span>
+                    </p>
                     <Image
                       priority
                       src="/home/iconArrowUprightWhite.png"
