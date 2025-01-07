@@ -24,7 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:title" content={metadata.twitter.title.default} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.images} />
-        <link rel="icon" href="/pic.jpeg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/head/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/head/favicon.ico" />
+        <link rel="shortcut icon" href="/head/favicon.ico" />
       </head>
       <body>
         <ThemeProvider
