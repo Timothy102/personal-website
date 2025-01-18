@@ -22,7 +22,7 @@ const education = [
   {
     name: "University of Amsterdam",
     desc: "Bachelor of Science - BS, Artificial Intelligence.",
-    year: "2023 - 2025",
+    year: "2023 - 2026",
   },
   {
     name: "Imperial College Business School",
