@@ -203,7 +203,7 @@ const Hero = () => {
   
           {/* Signature */}
           <div className="flex flex-col items-center space-y-4 w-full px-5 pt-10">
-            <p className="font-aeonik-regular text-sm opacity-70">@timcvetko 2024</p>
+            <p className="font-aeonik-regular text-sm opacity-70">@timcvetko 2025</p>
             <p className="font-voyager-thin text-3xl tracking-wide">timc</p>
           </div>
         </div>
