@@ -100,7 +100,7 @@ const Hero = () => {
             <div className="w-full font-aeonik-regular space-y-6 leading-[1.5] text-[21px] md:text-[18px] lg:text-[18px]">
               <p>I'm a 21 y/o ml engineer building AI-1st businesses.</p>
               <p>I spent the last 4 years building early-stage ai companies(inferex, rywave, nu, sync.labs).</p>
-              <p>my hypothesis: vertical AI agents will be the greatest value unlock ever, esp for protocol-driven workflows in old-fashioned industries, like healthcare, finance, ops. These are the next $100B companies.</p>
+              <p>my hypothesis: vertical AI agents will be the greatest value unlock ever, esp for protocol-driven workflows in old-fashioned industries, like healthcare, finance, ops. These are the next $10B companies.</p>
               <p>that's why we're building nexus - a holding company of AI businesses</p>
               <p>you can reach me via <Link className="italic border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://twitter.com/cvetko_tim">twitter</Link> or email at <Link href="mailto:tim@timcvetko.com" className="border-b italic hover:text-blue-500 transition-all duration-400 hover:border-blue-500">tim@timcvetko.com</Link>.</p>
             </div>
