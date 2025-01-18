@@ -33,13 +33,6 @@ const experiences = [
     year: "2022 - 2023",
     color: "white",
     icon: "inferex"
-    },
-    {
-    company: "Z-Score",
-    role: "ML Engineer",
-    year: "2021",
-    color: "gray",
-    icon: "z-score"
     }
   ];
 
