@@ -52,7 +52,7 @@ const experiences = [
     },
     {
         number: "03",
-        position: "ML ENGINEER",
+        position: "ENGINEER",
         year: "2022",
         companyName: "Inferex",
         link: "https://inferex.com",

@@ -29,7 +29,7 @@ const experiences = [
     },
     {
     company: "Inferex",
-    role: "ML Engineer",
+    role: "Engineer",
     year: "2022 - 2023",
     color: "white",
     icon: "inferex"
