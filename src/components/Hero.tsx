@@ -193,10 +193,13 @@ const Hero = () => {
                 • <Link href="https://atomlimbs.com" className="underline">Atom Limbs</Link> - the first artificial human arm [angel]
               </p>
               <p className="text-[16px]">
-                • <Link href="https://movenscapital.com/" className="underline">Movens VC</Link> - $100M AI VC fund in CEE [advisor]
+                • <Link href="https://movenscapital.com/" className="underline">Movens Capital</Link> - $100M AI VC fund in CEE [advisor]
               </p>
               <p className="text-[16px]">
                 • <Link href="https://e2.vc" className="underline">e2.vc</Link> - VC fund building tomorrow's emerging Europe [advisor]
+              </p>
+              <p className="text-[16px]">
+                • <Link href="https://nucleate.org/" className="underline">Nucleate</Link> - empowering next generation biotech founders [mentor]
               </p>
             </div>
           </div>
