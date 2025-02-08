@@ -189,6 +189,9 @@ const Hero = () => {
             <h1 className="text-[20px] font-aeonik-medium">Investing & Advising</h1>
             <div className="flex flex-col space-y-4">
               <p className="text-[16px]">
+                • <Link href="https://nucleate.org/" className="underline">Nucleate</Link> - empowering next generation biotech founders [mentor]
+              </p>
+              <p className="text-[16px]">
                 • <Link href="https://atomlimbs.com" className="underline">Atom Limbs</Link> - the first artificial human arm [angel]
               </p>
               <p className="text-[16px]">
@@ -196,9 +199,6 @@ const Hero = () => {
               </p>
               <p className="text-[16px]">
                 • <Link href="https://e2.vc" className="underline">e2.vc</Link> - VC fund building tomorrow's emerging Europe [advisor]
-              </p>
-              <p className="text-[16px]">
-                • <Link href="https://nucleate.org/" className="underline">Nucleate</Link> - empowering next generation biotech founders [mentor]
               </p>
             </div>
           </div>
