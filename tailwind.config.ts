@@ -19,7 +19,63 @@ const config: Config = {
       },
     },
     extend: {
-      // ... rest of your theme configuration
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#000000', // Pure black text
+            fontWeight: 600, // Semibold for all text
+            fontSize: '1.125rem', // Slightly larger base font size
+            lineHeight: '1.75',
+            p: {
+              fontWeight: 600,
+              color: '#000000',
+            },
+            'h1, h2, h3, h4, h5, h6': {
+              fontWeight: 800, // Extra bold for headings
+              color: '#000000',
+            },
+            'ul > li': {
+              fontWeight: 600,
+              color: '#000000',
+            },
+            'ol > li': {
+              fontWeight: 600,
+              color: '#000000',
+            },
+            a: {
+              fontWeight: 600,
+              color: '#000000',
+              '&:hover': {
+                color: '#404040',
+              },
+            },
+          },
+        },
+        // Dark mode specific styles
+        invert: {
+          css: {
+            color: '#ffffff', // Pure white text in dark mode
+            'h1, h2, h3, h4, h5, h6': {
+              color: '#ffffff',
+            },
+            p: {
+              color: '#ffffff',
+            },
+            'ul > li': {
+              color: '#ffffff',
+            },
+            'ol > li': {
+              color: '#ffffff',
+            },
+            a: {
+              color: '#ffffff',
+              '&:hover': {
+                color: '#e5e5e5',
+              },
+            },
+          },
+        },
+      },
     },
   },
   plugins: [

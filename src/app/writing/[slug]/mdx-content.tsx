@@ -31,15 +31,17 @@ const components: MDXComponents = {
 
 export function MDXContent({ source }: MDXContentProps) {
   return (
-    <MDXRemote 
-      source={source} 
-      components={components}
-      options={{
-        parseFrontmatter: true,
-        mdxOptions: {
-          development: process.env.NODE_ENV === 'development'
-        }
-      }}
-    />
+    <article className="prose dark:prose-invert max-w-none">
+      <MDXRemote 
+        source={source} 
+        components={components}
+        options={{
+          parseFrontmatter: true,
+          mdxOptions: {
+            development: process.env.NODE_ENV === 'development'
+          }
+        }}
+      />
+    </article>
   );
 }
