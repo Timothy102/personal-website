@@ -4,7 +4,6 @@ import {
   motion,
   useTransform,
   useScroll,
-  useVelocity,
   useSpring,
 } from "framer-motion";
 import { cn } from "@/utils/cn";
@@ -17,18 +16,29 @@ export const TracingBeam = ({
   className?: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
   const contentRef = useRef<HTMLDivElement>(null);
   const [svgHeight, setSvgHeight] = useState(0);
 
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end end"],
+  });
+
   useEffect(() => {
-    if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight);
-    }
+    const updateHeight = () => {
+      if (contentRef.current) {
+        setSvgHeight(contentRef.current.offsetHeight);
+      }
+    };
+
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    const timeout = setTimeout(updateHeight, 500);
+
+    return () => {
+      window.removeEventListener('resize', updateHeight);
+      clearTimeout(timeout);
+    };
   }, []);
 
   const y1 = useSpring(
@@ -38,8 +48,9 @@ export const TracingBeam = ({
       damping: 90,
     }
   );
+  
   const y2 = useSpring(
-    useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]),
+    useTransform(scrollYProgress, [0, 1], [50, svgHeight]),
     {
       stiffness: 500,
       damping: 90,
@@ -49,9 +60,9 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative w-full mx-auto h-full", className)}
+      className={cn("relative w-full mx-auto h-full min-h-screen", className)}
     >
-      <div className="absolute -left-4 md:-left-20 top-0 hidden sm:block">
+      <div className="absolute -left-4 md:-left-20 top-3 h-full hidden sm:block">
         <motion.div
           transition={{
             duration: 0.2,
@@ -76,18 +87,19 @@ export const TracingBeam = ({
               borderColor:
                 scrollYProgress.get() > 0 ? "white" : "var(--blue-600)",
             }}
-            className="h-2 w-2  rounded-full border border-neutral-300 bg-white"
+            className="h-2 w-2 rounded-full border border-neutral-300 bg-white"
           />
         </motion.div>
         <svg
-          viewBox={`0 0 20 ${svgHeight}`}
-          width="20"
-          height={svgHeight} // Set the SVG height
-          className=" ml-4 block"
+          viewBox={`0 0 40 ${svgHeight}`}
+          width="40"
+          height={svgHeight}
+          className="ml-4 block"
           aria-hidden="true"
+          preserveAspectRatio="none"
         >
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M 1 0 V ${svgHeight * 0.4} L 39 ${svgHeight * 0.4 + 50} V ${svgHeight}`}
             fill="none"
             stroke="#9091A0"
             strokeOpacity="0.16"
@@ -96,7 +108,7 @@ export const TracingBeam = ({
             }}
           ></motion.path>
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M 1 0 V ${svgHeight * 0.4} L 39 ${svgHeight * 0.4 + 50} V ${svgHeight}`}
             fill="none"
             stroke="url(#gradient)"
             strokeWidth="1.25"
@@ -111,8 +123,8 @@ export const TracingBeam = ({
               gradientUnits="userSpaceOnUse"
               x1="0"
               x2="0"
-              y1={y1} // set y1 for gradient
-              y2={y2} // set y2 for gradient
+              y1={y1}
+              y2={y2}
             >
               <stop stopColor="#18CCFC" stopOpacity="0"></stop>
               <stop stopColor="#18CCFC"></stop>
@@ -122,7 +134,7 @@ export const TracingBeam = ({
           </defs>
         </svg>
       </div>
-      <div ref={contentRef}>{children}</div>
+      <div ref={contentRef} className="relative">{children}</div>
     </motion.div>
   );
 };
