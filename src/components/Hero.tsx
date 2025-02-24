@@ -8,7 +8,7 @@ import { CardSpotlight } from "../components/ui/card-spotlight";
 const experiences = [
     {
     company: "Sync Labs",
-    role: "Founding Engineer",
+    role: "Engineer",
     year: "2024 →",
     color: "yellow",
     icon: "sync"
