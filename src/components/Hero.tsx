@@ -135,13 +135,13 @@ const Hero = () => {
             <div className="flex flex-col pb-20 md:pb-0 pt-6 md:pt-0 lg:pt-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
               <div className="flex flex-row space-x-4 w-full">
               <CardSpotlight 
-                  href="https://arcadia.timcvetko.com/"
+                  href="https://deepresearch.timcvetko.com/"
                   className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] p-4 space-y-2 bg-[var(--background)]"
                 >
                   <div className="flex flex-row w-full justify-between items-center">
                     <div className="flex items-center gap-2">
                       <img src="/logos/arcadia.png" alt="Arcadia logo" className="w-6 h-6" /> 
-                      <p className="font-aeonik-medium text-[18px]">arcadia</p>
+                      <p className="font-aeonik-medium text-[18px]">deep research</p>
                     </div>
                     <Image
                       priority
@@ -153,7 +153,7 @@ const Hero = () => {
                     />
                   </div>
                   <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
-                    host any ml model and get paid per inference call.
+                    vertical deep research agent built for personalization
                     <br/><br/>
                   </p>
                 </CardSpotlight>
