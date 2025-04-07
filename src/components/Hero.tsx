@@ -195,6 +195,9 @@ const Hero = () => {
                 • <Link href="https://atomlimbs.com" className="underline">Atom Limbs</Link> - the first artificial human arm [angel]
               </p>
               <p className="text-[16px]">
+                • <Link href="https://imagorehab.com" className="underline">Imago Rehab</Link> - neurological and cardiovascular telerehabilitation [angel]
+              </p>
+              <p className="text-[16px]">
                 • <Link href="https://movenscapital.com/" className="underline">Movens Capital</Link> - $100M AI VC fund in CEE [advisor]
               </p>
               <p className="text-[16px]">
