@@ -1,0 +1,142 @@
+---
+title: "Nexuses, deep research, intelligence, AGI"
+date: "2025-09-04"
+description: "what do true deep research capabilities mean?"
+---
+
+The name is unfortunate. If anything, OpenAI has built extended search capabilities. So did Perplexity. So did Google, etc. 
+
+We need to rethink what it means for an entity to possess deep research capabilities. Current implementations fail short in these ways:
+
+- Data retrieval/search results - are contextually irrelevant, often plain wrong due to unverified sources
+- The graph exploration process - is limited by LLMs' inherent attribute that performance is only as good as its underlying conditional probability. That's why prompt engineering is a real thing. Therefore, to reach learning curve gains, one must constrain the language models in ways that conform to the idiosyncratic research parameters of the one performing research.
+- Aimless - not tied to the research objective of the researcher: not constrained by your current learning/understanding, does not apply research from the understanding of the researcher, therefore, its returns are unapplicable.
+
+---
+
+### What Would True Deep Research Look Like?
+
+Okay, so what would true deep research capabilities look like?
+Let's start from first principles:
+
+1. **What is an entity knowledgeable?** *Knowledge is unique understanding that once applied produces a desired outcome.* In that sense, I have no knowledge of quantum mechanics, therefore, any result of applying my knowledge would be a lost vector. **Declarative knowledge infers an axiom of understanding.** If I say that man first landed on the moon on July 20th, 1969, that's a declarative knowledge. It's a true observation on some abstraction layer that if used correctly can move a given objective closer to its objective. **You usually don't get paid for knowing facts.** The second form of knowledge is imperative - it's a procedural understanding of how to get things done. A chef has imperative knowledge over how to build a meal, an engineer over how to build a rocket, and a writer on how to structure a book. **The more contextually-relevant and the more accurate your imperative knowledge, the more you can arbitrage it in the paid world.** Suddenly, you understand how and when to use learned imperative knowledge, and more importantly what underlying declarative knowledge = information is required to answer / think about that subset of problems. **You might refer this mechanism to a mental model - a framework of thinking about a given problem that results in a net benefit.**
+
+2. That's why OpenAI's deep research is not an intelligent form of research. 1) It applies the same DFS-like information exploration network = nexus for all possible research queries. 2) It fails in finding verified and contextually-relevant declarative knowledge to conform to the imperative structure created (which is not necessarily an easy problem to solve). 3) It does not understand the entirery of constrained context in which the research query was made, and how - if applicable - could help the researcher answer their research objective.
+
+3. ***Nexus*** - a converging information network that once converges, results in knowledge. Speed of convergence determines how fast that knowledge can take effect. Nexus' depth + accuracy determine how much value the resulting knowledge has in the real world. An economist that can comprehend how Trump's tarrifs will implicate the changing world order in the next year with incredible depth and accuracy holds great knowledge.
+
+4. *Intelligence* - In that sense, the deep researcher's "intelligence" is its ability to govern its own conditional probability to convert the constrained research problem into maximizing the possibility to reaching knowledge in answering the true underlying research objective.
+
+5. ***AGI*** - this might be AGI then: an intelligence capable of both identifying optimal research objectives and self-optimizing to build the most effective context graphs to navigate. That's what we're trying to achieve with this project.
+
+---
+
+### Our Vision
+
+Here's what we believe: Information alone does not move the world. We have an abundance of information. It's really information networks that converge fast. If we can intelligently capture such nexuses, we can enable faster research.
+
+Our vision is to put phd-level research technology into the hands of any vertical researcher, be it marketing, biochem, physics, etc. 
+
+<MDXImage src="/vision.png" alt="Vision" />
+
+---
+
+### Three Foundational Shifts
+
+To accomplish that, we are rethinking at least 3 foundational shifts that are required from OpenAI's implementation:
+
+#### 1. Idiosyncratic Research Behavior
+
+In order to build an intelligent vertical researcher agent, we must constrain our agent exploration space with as many idiosyncratic features of the researcher performing their research. This might include:
+
+- **Behavioral guidelines**: What are the conditions that would make the information network exploration graph (nexus) need to change course, seek more information, or conform to the idiosyncratic behavior patterns of the researcher. For example, a psychotherapist holds imperative knowledge and exhibits behavioral guidelines to know when to comfort/confront the patient.
+
+- **Source prioritization**: The capacity of the agent to accept researcher's preferences in sources, such as PubMed for medical papers, Arxiv for transformer papers, etc. This isn't just about listing preferred sources, but weighting their importance in the research process.
+
+- **Expertise level adaptation**: The agent needs to adjust its research depth and technical complexity based on the researcher's expertise. A domain expert would need deeper technical information, while a novice would need broader contextual understanding.
+
+- **Cognitive style matching**: Different researchers process information differently. Some need visual representations, others need structured comparisons, and others need narrative explanations. The agent should conform to these preferences.
+
+#### 2. Contextual Data Retrieval
+
+The agent's inherent ability to understand what declarative knowledge to collect to conform to the nexus' imperative structure. For example, when analyzing bitcoin market prices, it understands market prices are not enough to provide an accurate explanatory theory - we must also collect social media sentiment, regulatory policies, etc.
+
+Our implementation uses a multi-level approach to data retrieval:
+
+1. **Level 1 - Direct Reasoning**: For problems with definitive, objective answers requiring no external information. The LLM handles these directly.
+
+2. **Level 2 - Search**: For discrete factual information that can be answered with explicit single searches. Examples: "When was X invented?", "What is the population of Y?"
+
+3. **Level 3 - Complex Research**: For deeper questions requiring multi-domain knowledge synthesis. Examples: Practical advice, optimization problems, multi-factor analysis, health/fitness questions, career guidance.
+
+<MDXImage src="/levels.png" alt="Problem Levels" />
+
+Each level activates different node types in our context graph, from reasoning nodes to search nodes to complex research nodes, with different confidence thresholds and synthesis requirements.
+
+#### 3. Smart Context Graph Builders
+
+How an agent moves through nexus states - when to collect data, when to synthesize, etc. 
+
+The greatest MOAT and IP for whoever builds AGI is likely not going to come in the form of the greatest zero-shot LLM reasoner model. It will come in the way context graphs are built to support fast convergence of information networks (nexuses).
+
+Our implementation uses a state management approach that tracks:
+
+**Node Lifecycle**:
+Planning → Searching → Analyzing → Synthesizing → Complete
+
+With additional states like "awaiting_children" to handle dependencies between research queries. The system uses confidence scoring to determine when sufficient information has been gathered, automatically generating follow-up queries when confidence thresholds aren't met.
+
+<MDXImage src="/contextgraph.png" alt="Context Graph" />
+
+---
+
+### Building an Intelligent Research Agent (0 → 1)
+
+And that's exactly where we are now. We have built the initial vertical deep research agent built for personalization. To address the limitations of current deep research implementations, we are starting with the following:
+
+1. **Smart context graph builders**: We're starting with a wide nexus exploration structure that relies on query decomposition across our three research levels. Unlike simpler implementations that treat all queries the same, our system dynamically determines the appropriate processing level and creates specialized nodes to handle different aspects of the research
+
+<MDXImage src="/visualization.png" alt="Query Example" />
+
+2. **Search capabilities / data retrieval**: Tavily 
+we started using Tavily deliberately for providing relevant and verified search results. We see the data retrieval module to evolve into a subagent with its own context graph that can use relevant researcher context to pull correct declarative data from one of many sources / integrations
+
+3. **Personalization = constraints**. 
+We're introducing the notion of a "user model", a collection of static and dynamic components that steer the context graph toward constraint-optimized solutions.
+
+- Source prioritization (allowing for included sources in order of importance)
+<MDXImage src="/source-prioritization.png" alt="Source Prioritization" />
+
+- Expertise level (adjusting technical depth and explanation complexity)
+- Cognitive style (matching information presentation to user preferences)
+
+---
+
+### Improvements
+
+- The first iteration of the core agent framework(CAF) has been built. We're leading with a wide GTM motion. We've seen a lot of traction / demand from students & researchers, but ultimately we can extend the CAF to any vertical use case, any integration, and strive to making an ever-intelligent nexus converger agent.
+- Honestly, a lot of testing is needed. It's not entirely clear to us as to how making the resulted knowledge immediately applicable (is this a report, is this agent submitting results in databases, interacting live, etc). 
+- The 2nd point that is not entirely clear is how do we capture researcher's idiosyncracity. Ideally, we put a chip into your brain, but that's suboptimal :)
+
+---
+
+### Try It Yourself
+
+Visit [deepresearch.timcvetko.com](https://deepresearch.timcvetko.com).
+
+<MDXImage src="/try-it.png" alt="Try It" />
+
+---
+
+**P.S** - we're working with a selected few to launch their personal deep researchers. If you want us to build your personalized deep research agent, drop us a line. We'd love to hear from you.
+
+A lot of our friends who are students / researchers have started using it quite extensively.
+
+<MDXImage src="/traffic.png" alt="Traffic" />
+
+**P.P.S** - I use the words nexus, and context graphs almost interchangeably, yet I think those are the right contextual expressions. Nexus = converging information network. Context graph = result of agent moving through states due to the constrained nature of the problem. Ultimately, each research problem has its unique context graph.
+
+---
+### References
+
+- [Accelerating Scientific Breakthroughs with an AI Co-Scientist](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/)
