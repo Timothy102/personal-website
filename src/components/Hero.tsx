@@ -95,9 +95,9 @@ const Hero = () => {
           </div>
           <div className="flex flex-col w-full align-center justify-center space-y-6 md:space-y-6 items-start">
             <div className="flex flex-row w-full mb-3 items-center">
-              <h1 className="tracking-tight font-voyager-thin text-[38px] md:text-[32px] lg:text-[32px]">Hey, I'm Tim.</h1>
+              <h1 className="tracking-tight font-voyager-thin text-[38px] md:text-[32px] lg:text-[32px]">I'm Tim.</h1>
             </div>
-            <div className="w-full font-aeonik-regular space-y-6 leading-[1.5] text-[21px] md:text-[18px] lg:text-[18px]">
+            <div className="w-full font-aeonik-regular space-y-6 leading-[1.5] text-[20px] md:text-[18px] lg:text-[18px]">
               <p>I'm a 21 y/o ml engineer building AI-1st businesses.</p>
               <p>I spent the last 4 years building early-stage ai companies(inferex, rywave, nu, sync.labs). I think a lot about human cognition and creating agentic AI that complements the physical world.</p>
 
