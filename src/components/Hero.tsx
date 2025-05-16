@@ -91,13 +91,13 @@ const Hero = () => {
         {/* Intro Section */}
         <div className="flex flex-row w-full space-x-1 mt-24">
           <div className="self-start mt-3">
-            <h1 className="tracking-tight font-voyager-thin text-[16px] md:text-[14px] lg:text-[14px] mr-1">►</h1>
+            <h1 className="tracking-tight font-voyager-thin text-[16px] md:text-[14px] lg:text-[14px] mr-1"></h1>
           </div>
           <div className="flex flex-col w-full align-center justify-center space-y-6 md:space-y-6 items-start">
             <div className="flex flex-row w-full mb-3 items-center">
-              <h1 className="tracking-tight font-voyager-thin text-[38px] md:text-[32px] lg:text-[32px]">I'm Tim.</h1>
+              <h1 className="tracking-tight font-voyager-thin text-[32px] md:text-[36px] lg:text-[36px]">I'm Tim.</h1>
             </div>
-            <div className="w-full font-aeonik-regular space-y-6 leading-[1.5] text-[20px] md:text-[18px] lg:text-[18px]">
+            <div className="w-full font-aeonik-regular space-y-6 leading-[150%] text-[18px] md:text-[18px] lg:text-[18px]">
               <p>I'm a 21 y/o ml engineer building AI-1st businesses.</p>
               <p>I spent the last 4 years building early-stage ai companies(inferex, rywave, nu, sync.labs). I think a lot about human cognition and creating agentic AI that complements the physical world.</p>
 
@@ -108,7 +108,7 @@ const Hero = () => {
   
           {/* Experience Section */}
           <div className="flex flex-col space-y-4 px-5">
-            <h1 className="tracking-tight font-voyager-thin text-[20px] mb-3">Experience</h1>
+            <h1 className="tracking-tight font-voyager-thin text-[18px] mb-3">Experience</h1>
             {experiences.map((item, index) => (
               <div key={index} className="flex items-center justify-between border-b border-[#00000033] dark:border-[#ffffff1a] py-4">
                 <div className="flex items-center space-x-4">
@@ -120,18 +120,18 @@ const Hero = () => {
                     <img src={`/icons/${item.icon}.png`} alt={item.company} className="w-6 h-6" />
                   </div>
                   <div>
-                    <h2 className="text-lg font-aeonik-regular">{item.company}</h2>
-                    <p className="text-[#00000080] dark:text-[#ffffff80] text-sm">{item.role}</p>
+                    <h2 className="text-[18px] font-aeonik-regular">{item.company}</h2>
+                    <p className="text-[#00000080] dark:text-[#ffffff80] text-[16px] font-aeonik-regular">{item.role}</p>
                   </div>
                 </div>
-                <p className="text-[#00000080] dark:text-[#ffffff80] text-sm">{item.year}</p>
+                <p className="text-[#00000080] dark:text-[#ffffff80] text-[16px] font-aeonik-regular">{item.year}</p>
               </div>
             ))}
           </div>
 
           {/* Products Section */}
           <div className="flex flex-col space-y-4 px-5">
-            <h1 className="tracking-tight font-voyager-thin text-[21px]">Products</h1>
+            <h1 className="tracking-tight font-voyager-thin text-[18px]">Products</h1>
             <div className="flex flex-col pb-20 md:pb-0 pt-6 md:pt-0 lg:pt-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
               <div className="flex flex-row space-x-4 w-full">
               <CardSpotlight 
@@ -141,7 +141,7 @@ const Hero = () => {
                   <div className="flex flex-row w-full justify-between items-center">
                     <div className="flex items-center gap-2">
                       <img src="/logos/arcadia.png" alt="Arcadia logo" className="w-6 h-6" /> 
-                      <p className="font-aeonik-medium text-[18px]">deep research</p>
+                      <p className="font-aeonik-regular text-[18px]">deep research</p>
                     </div>
                     <Image
                       priority
@@ -152,7 +152,7 @@ const Hero = () => {
                       className="w-3 h-3 transition-opacity duration-200 opacity-100"
                     />
                   </div>
-                  <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
+                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">
                     vertical deep research agent built for personalization
                     <br/><br/>
                   </p>
@@ -162,7 +162,7 @@ const Hero = () => {
                   className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] p-4 space-y-2 bg-[var(--background)]"
                 >
                   <div className="flex flex-row w-full justify-between items-center">
-                    <p className="font-aeonik-medium text-[18px] flex items-center space-x-2">
+                    <p className="font-aeonik-regular text-[18px] flex items-center space-x-2">
                       <img src="/logos/videochat.png" alt="Videochat icon" className="inline w-4 h-4 align-middle mb-50" /> 
                       <span>videochat</span>
                     </p>
@@ -175,7 +175,7 @@ const Hero = () => {
                       className="w-3 h-3 transition-opacity duration-200 opacity-100"
                     />
                   </div>
-                  <p className="opacity-70 font-aeonik-regular text-[14px] leading-[130%]">
+                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">
                     learn 10x by chatting with any yt video
                     <br/><br/>
                   </p>
@@ -186,21 +186,21 @@ const Hero = () => {
   
           {/* Investing & Advising Section */}
           <div className="flex flex-col space-y-6 px-5">
-            <h1 className="text-[20px] font-aeonik-medium">Investing & Advising</h1>
+            <h1 className="text-[18px] font-voyager-thin">Investing & Advising</h1>
             <div className="flex flex-col space-y-4">
-              <p className="text-[16px]">
+              <p className="text-[16px] font-aeonik-regular">
                 • <Link href="https://nucleate.org/" className="underline">Nucleate</Link> - empowering next generation biotech founders [mentor]
               </p>
-              <p className="text-[16px]">
+              <p className="text-[16px] font-aeonik-regular">
                 • <Link href="https://atomlimbs.com" className="underline">Atom Limbs</Link> - the first artificial human arm [angel]
               </p>
-              <p className="text-[16px]">
+              <p className="text-[16px] font-aeonik-regular">
                 • <Link href="https://imagorehab.com" className="underline">Imago Rehab</Link> - neurological and cardiovascular telerehabilitation [angel]
               </p>
-              <p className="text-[16px]">
+              <p className="text-[16px] font-aeonik-regular">
                 • <Link href="https://movenscapital.com/" className="underline">Movens Capital</Link> - $100M AI VC fund in CEE [advisor]
               </p>
-              <p className="text-[16px]">
+              <p className="text-[16px] font-aeonik-regular">
                 • <Link href="https://e2.vc" className="underline">e2.vc</Link> - VC fund building tomorrow's emerging Europe [advisor]
               </p>
             </div>
@@ -208,8 +208,8 @@ const Hero = () => {
   
           {/* Signature */}
           <div className="flex flex-col items-center space-y-4 w-full px-5 pt-10">
-            <p className="font-aeonik-regular text-sm opacity-70">@timcvetko 2025</p>
-            <p className="font-voyager-thin text-3xl tracking-wide">timc</p>
+            <p className="font-aeonik-regular text-[16px] opacity-70">@timcvetko 2025</p>
+            <p className="font-voyager-thin text-[28px] tracking-wide">timc</p>
           </div>
         </div>
       </main>
