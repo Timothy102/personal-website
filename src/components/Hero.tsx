@@ -99,7 +99,7 @@ const Hero = () => {
             </div>
             <div className="w-full font-aeonik-regular space-y-6 leading-[150%] text-[18px] md:text-[18px] lg:text-[18px]">
               <p>I'm a 21 y/o ml engineer building AI-1st businesses.</p>
-              <p>I spent the last 4 years building early-stage ai companies(inferex, rywave, nu, sync.labs). I think a lot about human cognition and creating agentic AI that complements the physical world.</p>
+              <p>I spent the last 4 years building early-stage ai companies. I think a lot about human cognition and creating agentic AI that complements the physical world.</p>
 
               <p>you can reach me via <Link className="italic border-b hover:text-blue-500 transition-all duration-400 hover:border-blue-500" href="https://twitter.com/cvetko_tim">twitter</Link> or email at <Link href="mailto:tim@timcvetko.com" className="border-b italic hover:text-blue-500 transition-all duration-400 hover:border-blue-500">tim@timcvetko.com</Link>.</p>
             </div>
