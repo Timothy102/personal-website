@@ -22,7 +22,7 @@ const experiences = [
     },
     {
     company: "Rywave",
-    role: "Co-Founder & CEO",
+    role: "Co-Founder",
     year: "2022 - 2023",
     color: "yellow",
     icon: "rywave"
