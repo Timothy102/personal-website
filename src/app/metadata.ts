@@ -4,7 +4,7 @@ export const metadata = {
       template: "%s | timcvetko.com",
     },
     description:
-    "Hey, I'm Tim. I'm a 21 y/o ml engineer working on building AI-1st businesses.",
+    "Hey, I'm Tim. I'm a 22 y/o ml engineer working on building AI-1st businesses.",
     keywords: [],
     robots: {
       index: true,
@@ -25,7 +25,7 @@ export const metadata = {
         template: "%s | timcvetko.com",
       },
       description:
-      "Hey, I'm Tim. I'm a 21 y/o ml engineer working on building AI-1st businesses.",
+      "Hey, I'm Tim. I'm a 22 y/o ml engineer working on building AI-1st businesses.",
     },
     openGraph: {
       url: "https://timcvetko.com/",
@@ -37,7 +37,7 @@ export const metadata = {
         template: "%s | timcvetko.com",
       },
       description:
-      "Hey, I'm Tim. I'm a 21 y/o ml engineer working on building AI-1st businesses.",
+      "Hey, I'm Tim. I'm a 22 y/o ml engineer working on building AI-1st businesses.",
       images: [
         {
           url: "https://timcvetko.com/head/favicon.png",
