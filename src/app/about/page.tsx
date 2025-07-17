@@ -33,7 +33,16 @@ const education = [
 
 const experiences = [
     {
-        number: "01",
+      number: "01",
+      position: "ENGINEER",
+      year: "2025 →",
+      companyName: "Tenex",
+      link: "https://tenex.com",
+      imageName: "/icons/tenex.png",
+      roleDescription: "AI Transformation Company."
+    },
+    {
+        number: "02",
         position: "MLOPS ENGINEER",
         year: "2024",
         companyName: "sync.labs (yc w24)",
@@ -42,7 +51,7 @@ const experiences = [
         roleDescription: "Building generative models to modify + synthesize humans in video."
     },
     {
-        number: "02",
+        number: "03",
         position: "DATA SCIENTIST",
         year: "2023",
         companyName: "NU",
@@ -51,7 +60,7 @@ const experiences = [
         roleDescription: "Longevity startup. Worked on epigenetic age clocks, bioinformatic pipelines, and meal planning."
     },
     {
-        number: "03",
+        number: "04",
         position: "ENGINEER",
         year: "2022",
         companyName: "Inferex",
@@ -60,7 +69,7 @@ const experiences = [
         roleDescription: "Compute infrastructure for ML/AI pipeline inference."
     },
     {
-        number: "04",
+        number: "05",
         position: "CO-FOUNDER & CEO",
         year: "2022",
         companyName: "Rywave",
@@ -94,7 +103,7 @@ const About = () => {
                   <div className="w-full md:w-2/3 font-aeonik-regular tracking-[0.015em] space-y-10 items-center align-center justify-center text-[21px] md:text-[21px]">
                     <p className="leading-[150%] mt-10">Glad to meet you.</p>
                     <p className="leading-[150%]">For as long as I can remember, I've been relentlessly driven. First it was football, then coding. Now, I focus on building early-stage AI-1st businesses.</p>
-                    <p className="leading-[150%]">I currently work as mlops @ sync.labs (yc w24), a research company where we're building generative models to modify and synthesize humans in video.</p>
+                    <p className="leading-[150%]">I currently work at Tenex where we work with businesses through AI-1st transformations, build internal IP, and move crazy fast. </p>
                     <p className="leading-[150%]">I like to work intensely on hard problems that improve the way we work, live, and create, preferably with people smarter than me. I tend to be direct, inquisitive and I read a lot. Find my favourite books <Link href="/reading" className="text-blue-500 underline">here</Link>.</p>
                     <p className="leading-[150%]">I genuinely enjoy sports(tennis recently), 60's jazz, and authentic people with fire in their eyes. Also a Gemini, ENFJ-a, 80% Dynamo(ideas), 20% Steel(systems).</p>
                     <p className="leading-[150%]">Talk to me about:</p>

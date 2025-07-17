@@ -7,9 +7,16 @@ import { CardSpotlight } from "../components/ui/card-spotlight";
 
 const experiences = [
     {
+      company: "Tenex",
+      role: "Engineer",
+      year: "2025 →",
+      color: "blue",
+      icon: "tenex"
+    },
+    {
     company: "Sync Labs",
     role: "Engineer",
-    year: "2024 →",
+    year: "2024 → 2024",
     color: "yellow",
     icon: "sync"
     },
