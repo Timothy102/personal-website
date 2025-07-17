@@ -35,7 +35,7 @@ const experiences = [
     {
       number: "01",
       position: "ENGINEER",
-      year: "2025 →",
+      year: "2025",
       companyName: "Tenex",
       link: "https://tenex.com",
       imageName: "/icons/tenex.png",
@@ -45,7 +45,7 @@ const experiences = [
         number: "02",
         position: "MLOPS ENGINEER",
         year: "2024",
-        companyName: "sync.labs (yc w24)",
+        companyName: "sync.labs",
         link: "https://sync.labs",
         imageName: "/icons/sync.png",
         roleDescription: "Building generative models to modify + synthesize humans in video."
@@ -61,16 +61,7 @@ const experiences = [
     },
     {
         number: "04",
-        position: "ENGINEER",
-        year: "2022",
-        companyName: "Inferex",
-        link: "https://inferex.com",
-        imageName: "/icons/inferex.png",
-        roleDescription: "Compute infrastructure for ML/AI pipeline inference."
-    },
-    {
-        number: "05",
-        position: "CO-FOUNDER & CEO",
+        position: "CO-FOUNDER",
         year: "2022",
         companyName: "Rywave",
         link: "https://rywave.com",
