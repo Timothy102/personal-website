@@ -225,9 +225,6 @@ const Hero = () => {
             <h1 className="text-[18px] font-voyager-thin">Investing & Advising</h1>
             <div className="flex flex-col space-y-4">
               <p className="text-[16px] font-aeonik-regular">
-                • <Link href="https://nucleate.org/" className="underline">Nucleate</Link> - empowering next generation biotech founders [mentor]
-              </p>
-              <p className="text-[16px] font-aeonik-regular">
                 • <Link href="https://atomlimbs.com" className="underline">Atom Limbs</Link> - the first artificial human arm [angel]
               </p>
               <p className="text-[16px] font-aeonik-regular">
