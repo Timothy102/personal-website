@@ -132,11 +132,10 @@ const Hero = () => {
           {/* Products Section */}
           <div className="flex flex-col space-y-4 px-5">
             <h1 className="tracking-tight font-voyager-thin text-[18px]">Products</h1>
-            <div className="flex flex-col pb-20 md:pb-0 pt-6 md:pt-0 lg:pt-0 sm:flex-row w-full space-y-3 md:space-y-0 md:space-x-4">
-              <div className="flex flex-row space-x-4 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-6 md:pb-0 pt-6 md:pt-0 lg:pt-0 w-full">
               <CardSpotlight 
                   href="https://deepresearch.timcvetko.com/"
-                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] p-4 space-y-2 bg-[var(--background)]"
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] px-4 py-2 space-y-1 bg-[var(--background)]"
                 >
                   <div className="flex flex-row w-full justify-between items-center">
                     <div className="flex items-center gap-2">
@@ -152,14 +151,35 @@ const Hero = () => {
                       className="w-3 h-3 transition-opacity duration-200 opacity-100"
                     />
                   </div>
-                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">
-                    vertical deep research agent built for personalization
-                    <br/><br/>
-                  </p>
+                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">vertical deep research agent built for personalization</p>
+                </CardSpotlight>
+                <CardSpotlight 
+                  href="https://mkb.timcvetko.com/"
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] px-4 py-2 space-y-1 bg-[var(--background)]"
+                >
+                  <div className="flex flex-row w-full justify-between items-center">
+                    <p className="font-aeonik-regular text-[18px] flex items-center space-x-2">
+                      <img
+                        src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232563eb'/><text x='50' y='65' font-family='Arial,sans-serif' font-size='45' font-weight='bold' text-anchor='middle' fill='white'>M</text></svg>"
+                        alt="MKB-10 icon"
+                        className="inline w-4 h-4 align-middle mb-50"
+                      />
+                      <span>mkb-10 classifier</span>
+                    </p>
+                    <Image
+                      priority
+                      src="/home/iconArrowUprightWhite.png"
+                      height={100}
+                      width={100}
+                      alt="White arrow icon"
+                      className="w-3 h-3 transition-opacity duration-200 opacity-100"
+                    />
+                  </div>
+                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">MKB-10 Slovenian disease codes classifier</p>
                 </CardSpotlight>
                 <CardSpotlight 
                   href="https://videochat.timcvetko.com"
-                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] p-4 space-y-2 bg-[var(--background)]"
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] px-4 py-2 space-y-1 bg-[var(--background)]"
                 >
                   <div className="flex flex-row w-full justify-between items-center">
                     <p className="font-aeonik-regular text-[18px] flex items-center space-x-2">
@@ -175,12 +195,28 @@ const Hero = () => {
                       className="w-3 h-3 transition-opacity duration-200 opacity-100"
                     />
                   </div>
-                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">
-                    learn 10x by chatting with any yt video
-                    <br/><br/>
-                  </p>
+                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">learn 10x by chatting with any yt video</p>
                 </CardSpotlight>
-              </div>
+                <CardSpotlight 
+                  href="https://longevity.leonbedrac.si"
+                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] px-4 py-2 space-y-1 bg-[var(--background)]"
+                >
+                  <div className="flex flex-row w-full justify-between items-center">
+                    <p className="font-aeonik-regular text-[18px] flex items-center space-x-2">
+                      <img src="/logos/white.png" alt="Longevity logo" className="inline w-4 h-4 align-middle mb-50" /> 
+                      <span>longevity</span>
+                    </p>
+                    <Image
+                      priority
+                      src="/home/iconArrowUprightWhite.png"
+                      height={100}
+                      width={100}
+                      alt="White arrow icon"
+                      className="w-3 h-3 transition-opacity duration-200 opacity-100"
+                    />
+                  </div>
+                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">where longevity meets performance</p>
+                </CardSpotlight>
             </div>
           </div>
   
