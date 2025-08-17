@@ -153,50 +153,8 @@ const Hero = () => {
                   </div>
                   <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">vertical deep research agent built for personalization</p>
                 </CardSpotlight>
-                <CardSpotlight 
-                  href="https://mkb.timcvetko.com/"
-                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] px-4 py-2 space-y-1 bg-[var(--background)]"
-                >
-                  <div className="flex flex-row w-full justify-between items-center">
-                    <p className="font-aeonik-regular text-[18px] flex items-center space-x-2">
-                      <img
-                        src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232563eb'/><text x='50' y='65' font-family='Arial,sans-serif' font-size='45' font-weight='bold' text-anchor='middle' fill='white'>M</text></svg>"
-                        alt="MKB-10 icon"
-                        className="inline w-4 h-4 align-middle mb-50"
-                      />
-                      <span>mkb-10 classifier</span>
-                    </p>
-                    <Image
-                      priority
-                      src="/home/iconArrowUprightWhite.png"
-                      height={100}
-                      width={100}
-                      alt="White arrow icon"
-                      className="w-3 h-3 transition-opacity duration-200 opacity-100"
-                    />
-                  </div>
-                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">MKB-10 Slovenian disease codes classifier</p>
-                </CardSpotlight>
-                <CardSpotlight 
-                  href="https://videochat.timcvetko.com"
-                  className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] px-4 py-2 space-y-1 bg-[var(--background)]"
-                >
-                  <div className="flex flex-row w-full justify-between items-center">
-                    <p className="font-aeonik-regular text-[18px] flex items-center space-x-2">
-                      <img src="/logos/videochat.png" alt="Videochat icon" className="inline w-4 h-4 align-middle mb-50" /> 
-                      <span>videochat</span>
-                    </p>
-                    <Image
-                      priority
-                      src="/home/iconArrowUprightWhite.png"
-                      height={100}
-                      width={100}
-                      alt="White arrow icon"
-                      className="w-3 h-3 transition-opacity duration-200 opacity-100"
-                    />
-                  </div>
-                  <p className="opacity-70 font-aeonik-regular text-[16px] leading-[150%]">learn 10x by chatting with any yt video</p>
-                </CardSpotlight>
+
+
                 <CardSpotlight 
                   href="https://longevity.leonbedrac.si"
                   className="flex-1 opacity-80 hover:opacity-100 transition-all duration-400 rounded-xl border border-[#00000033] dark:border-[#ffffff33] px-4 py-2 space-y-1 bg-[var(--background)]"
